@@ -42,3 +42,7 @@ __pycache__/
 .venv/
 dist/
 build/
+
+# Raw reference videos — downloaded for study only, never committed
+research/raw-videos/**/media/*
+!research/raw-videos/**/media/.gitkeep
