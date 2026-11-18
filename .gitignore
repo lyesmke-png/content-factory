@@ -1,0 +1,44 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials*.json
+
+# Heavy media — store links only, never raw files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.wav
+*.mp3
+*.aac
+*.flac
+*.psd
+*.ai
+*.zip
+*.tar.gz
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+!shared/brand/**/*.svg
+!shared/brand/**/*.png
+
+# OS / editors
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Deps / build
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+dist/
+build/
