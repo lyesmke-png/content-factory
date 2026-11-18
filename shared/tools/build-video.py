@@ -111,16 +111,20 @@ def main():
             cmd = [ffmpeg, "-y", "-loglevel", "error", "-i", silent]
             for t in tracks:
                 cmd += ["-i", t]
+            # Every branch pads the audio so a short narration can never cut
+            # the picture off: -shortest then ends the file at the last shot.
             if args.audio and args.music:
-                flt = ("[2:a]volume=%.1fdB,apad[m];"
-                       "[1:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]"
-                       % args.music_db)
+                flt = ("[1:a]apad[n];[2:a]volume=%.1fdB,apad[m];"
+                       "[n][m]amix=inputs=2:duration=longest:dropout_transition=0,"
+                       "apad[a]" % args.music_db)
                 cmd += ["-filter_complex", flt, "-map", "0:v", "-map", "[a]"]
             elif args.music:
-                cmd += ["-filter_complex", "[1:a]volume=%.1fdB[a]" % args.music_db,
+                cmd += ["-filter_complex",
+                        "[1:a]volume=%.1fdB,apad[a]" % args.music_db,
                         "-map", "0:v", "-map", "[a]"]
             else:
-                cmd += ["-map", "0:v", "-map", "1:a"]
+                cmd += ["-filter_complex", "[1:a]apad[a]",
+                        "-map", "0:v", "-map", "[a]"]
             cmd += ["-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
                     "-shortest", args.out]
             subprocess.run(cmd, check=True)
