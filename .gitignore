@@ -46,3 +46,8 @@ build/
 # Raw reference videos — downloaded for study only, never committed
 research/raw-videos/**/media/*
 !research/raw-videos/**/media/.gitkeep
+
+# Produced videos — final renders live on the machine only
+produced/**
+!produced/README.md
+!produced/**/.gitkeep

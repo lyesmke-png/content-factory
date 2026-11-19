@@ -1,0 +1,15 @@
+# استعلامات بحث لاختيار أقوى المراجع — نيش ai-short-films
+# السكريبت يجمع المرشحين ثم يرتّبهم بعدد المشاهدات الفعلي من يوتيوب
+# ويأخذ الأقوى خمسة، ويستثني ما تجاوز ثلاث دقائق.
+#
+# الاستعمال (بعد تثبيت yt-dlp):
+#   python shared/tools/fetch-reference.py ai-short-films \
+#     --search research/raw-videos/ai-short-films/candidates.txt --top 5
+
+AI short film shorts twist ending
+AI generated short film viral
+AI horror short film shorts
+AI short film transformation shorts
+sora veo cinematic short film shorts
+فيلم قصير بالذكاء الاصطناعي
+قصة قصيرة ذكاء اصطناعي شورتس

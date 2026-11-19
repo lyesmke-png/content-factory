@@ -1,0 +1,9 @@
+# استعلامات بحث لاختيار أقوى المراجع — نيش kids-films
+#   python shared/tools/fetch-reference.py kids-films \
+#     --search research/raw-videos/kids-films/candidates.txt --top 5
+
+قصص اطفال قصيرة شورتس
+حكايات اطفال قصيرة مفيدة
+قصة قبل النوم للاطفال قصيرة
+قصص اطفال تعليمية قيم شورتس
+kids short story moral shorts animation
