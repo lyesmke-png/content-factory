@@ -1,9 +1,12 @@
-# استعلامات بحث لاختيار أقوى المراجع — نيش kids-films
+# مصادر اختيار المراجع — kids-films
+# سطر يبدأ بـ http = تبويب Shorts لقناة (المصدر الموثوق للفيديو العمودي:
+# بحث يوتيوب يتجاهل "#shorts" ويعيد فيديوهات طويلة).
+# السكريبت يرتّب بعدد المشاهدات الفعلي ويأخذ الأقوى.
 #   python shared/tools/fetch-reference.py kids-films \
-#     --search research/raw-videos/kids-films/candidates.txt --top 5
+#     --search research/raw-videos/kids-films/candidates.txt --top 5 --pool 30
 
-قصص اطفال قصيرة شورتس
-حكايات اطفال قصيرة مفيدة
-قصة قبل النوم للاطفال قصيرة
-قصص اطفال تعليمية قيم شورتس
-kids short story moral shorts animation
+https://www.youtube.com/@HadootaFamily/shorts
+https://www.youtube.com/@FlashToons/shorts
+https://www.youtube.com/channel/UCPRKH76TMHmHjUMeejf8aJQ/shorts
+https://www.youtube.com/channel/UCCbDB88p19HcPrNbvDyR5yw/shorts
+https://www.youtube.com/channel/UCyT-fjNDg8h5wzqWJYP4bTA/shorts

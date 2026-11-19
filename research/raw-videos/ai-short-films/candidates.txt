@@ -1,15 +1,19 @@
-# استعلامات بحث لاختيار أقوى المراجع — نيش ai-short-films
-# السكريبت يجمع المرشحين ثم يرتّبهم بعدد المشاهدات الفعلي من يوتيوب
-# ويأخذ الأقوى خمسة، ويستثني ما تجاوز ثلاث دقائق.
+# مصادر اختيار المراجع — ai-short-films
 #
-# الاستعمال (بعد تثبيت yt-dlp):
+# قنوات متخصّصة فقط، لا استعلامات نصّية عامة: جرّبنا الترتيب بالمشاهدات عبر
+# بحث يوتيوب العام فجاء بـ Sesame Street و Tom & Jerry — المشاهدات وحدها
+# تُغرق الصلة. القناة المتخصّصة تضمن الصلة، والمشاهدات ترتّب داخلها.
+# حدّ أقصى مرجعان من كل قناة.
+#
 #   python shared/tools/fetch-reference.py ai-short-films \
-#     --search research/raw-videos/ai-short-films/candidates.txt --top 5
+#     --search research/raw-videos/ai-short-films/candidates.txt --top 5 --pool 30
 
-AI short film shorts twist ending
-AI generated short film viral
-AI horror short film shorts
-AI short film transformation shorts
-sora veo cinematic short film shorts
-فيلم قصير بالذكاء الاصطناعي
-قصة قصيرة ذكاء اصطناعي شورتس
+https://www.youtube.com/channel/UCqX6s2AFGTQAyt4wCmlI5WQ/shorts
+https://www.youtube.com/channel/UCqrWkLKwRKNZRbbJXVEvAjw/shorts
+https://www.youtube.com/channel/UCpSoiXN2gf66dkhk5WDy0pg/shorts
+https://www.youtube.com/channel/UC7tK08JXgcueab_Lz1NMWVw/shorts
+https://www.youtube.com/channel/UCPS_D6ZbCQoK1X_EbMh7A6Q/shorts
+https://www.youtube.com/channel/UCtrSb-q6TP7wJmkyyt09MQw/shorts
+
+# فيلم قصير أصلي (لا IP) — مرجع سرد لا مرجع انتشار
+https://www.youtube.com/watch?v=t_SgA6ymPuc
