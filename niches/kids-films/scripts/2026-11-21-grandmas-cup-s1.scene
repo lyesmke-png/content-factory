@@ -1,0 +1,16 @@
+# Timing sheet for KD-001. One row per shot:
+# start	end	shot	move	caption	audio
+#
+# The moves are chosen so no two neighbouring shots move the same way - that
+# is what keeps a sequence of stills reading as camera work rather than as a
+# slideshow. The peak at 0:19 gets the slowest push and the longest hold,
+# which is `#peak-gets-time`: a fifth of the runtime on the face that knows
+# the answer, while the question comes from off-camera.
+0.0	5.0	shot1	in	هَدِيَّةُ جَدَّتِي	01-noor.mp3
+5.0	10.0	shot2	right	-	02-noor.mp3
+10.0	15.0	shot3	in	أَزْرَقُ… جَمِيلٌ	03-samsam.mp3
+15.0	19.0	shot4	out	-	-
+19.0	27.0	shot5	in	أَيْنَ كُوبِي؟	04-noor.mp3
+27.0	32.0	shot6	out	أَنَا أَسْقَطْتُهُ	05-samsam.mp3
+32.0	37.0	shot7	in	قُلْتَ الحَقِيقَة	06-noor.mp3
+37.0	41.0	shot8	down	وَمَاذَا نَفْعَلُ بِالقِطَعِ؟	07-samsam.mp3

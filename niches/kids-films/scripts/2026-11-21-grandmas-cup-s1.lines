@@ -1,0 +1,14 @@
+# Dialogue for KD-001, one utterance per line: <speaker>TAB<vocalised text>.
+# Fully vocalised on purpose - an unvowelled Arabic word is ambiguous and the
+# engine will guess. Proper nouns end in sukoon with no tanwin.
+# 23 words in total, about 12 seconds spoken, against 41 seconds of video:
+# the rest is picture and deliberate silence, which is what the strongest
+# reference does when it gives a third of its runtime to one face.
+
+noor	هٰذَا كُوبُ جَدَّتِي!
+noor	سَأُحْضِرُ المَاءَ!
+samsam	أَزْرَقُ… جَمِيلٌ.
+noor	كُوبِي؟ أَيْنَ كُوبِي؟
+samsam	أَنَا… أَنَا أَسْقَطْتُهُ.
+noor	قُلْتَ الحَقِيقَةَ.
+samsam	وَمَاذَا نَفْعَلُ بِالقِطَعِ؟
