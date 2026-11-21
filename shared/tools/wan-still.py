@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Generate one still with Wan 2.1 1.3B through the ComfyUI HTTP API.
 
-Stills, not video. Measured on this machine (GTX 1050 Ti, 4GB):
+Stills, not video. Measured on this machine (GTX 1050 Ti, 4GB, 1.94 TFLOPS
+and no tensor cores):
 
-    768x768 x 33 frames  ->  1140 s   (553x real time: unusable)
-    768x768 x  1 frame   ->   345 s   (8 shots = 46 min per video)
+    768x768 x 33 frames  ->  1140 s    (553x real time: unusable)
+    768x768 x  1 frame   ->   206 s    (8 shots = 27 min per video)
 
-A second run with the models already resident also took 345 s, so loading is
-not the cost and batching shots into one session saves nothing.
+Run a whole scene list against ONE running server. 206 s is the steady state
+with the models resident; the first shot after a restart costs ~150 s more.
+Resolution is set by quality, not by speed: 640 and 512 are far cheaper and
+both unusable (see the table in STACK_DECISION.md).
 
 The server must be started by shared/tools/start-comfyui.sh - without
 --disable-pinned-memory the run is killed by the OS memory guard.
