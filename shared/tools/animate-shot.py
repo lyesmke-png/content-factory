@@ -116,6 +116,9 @@ def main():
     ap.add_argument("out")
     ap.add_argument("--fps", type=int, default=30)
     ap.add_argument("--seed", type=int, default=7, help="fixed seed = repeatable blinks")
+    ap.add_argument("--mouth", choices=["on", "off"], default="on",
+                    help="off for a narrator line: the character on screen is "
+                         "not the one speaking, so the lips must stay shut")
     a = ap.parse_args()
 
     ffmpeg = find_ffmpeg()
@@ -132,6 +135,8 @@ def main():
 
     mouths = [load(a.shot_dir, "mouth-%d.png" % i) for i in range(4)]
     mouths = [m for m in mouths if m is not None]
+    if a.mouth == "off":
+        mouths = mouths[:1]
     eyes_open = load(a.shot_dir, "eyes-open.png")
     eyes_shut = load(a.shot_dir, "eyes-shut.png")
 
