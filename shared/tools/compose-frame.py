@@ -32,8 +32,15 @@ import shutil
 import subprocess
 
 W, H = 1080, 1920
-PIC_H = 966          # the picture band, from the measured reference
-PIC_Y = 390
+# Picture band, measured with cropdetect across the four AI references that
+# use this format:
+#   Simba (8.4M)  360x322 at y=130  -> 50% of height, 1.12:1
+#   Shere (6.4M)  360x384 at y=82   -> 60% of height, 0.94:1
+#   Drake         360x396 at y=142  -> 62% of height, 0.91:1
+# The median is a near-square picture filling a little over half the frame, so
+# the default is square: it also happens to be the cheapest shape to generate.
+PIC_H = 1080
+PIC_Y = 420
 FONT_DIR = pathlib.Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts"
 
 
