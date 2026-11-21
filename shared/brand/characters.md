@@ -89,9 +89,23 @@ strong backlight rim light, muted film grain
 
 فكل أمر توليد في هذا المشروع يلتزم الثلاثة معًا:
 
-1. **اسم اللون مرّتين بمرادفين** — `a vivid crimson red scarf, scarlet red fabric`
-2. **اللون المُزاحِم في الأمر السالب** — `yellow, yellow scarf, orange scarf`
-3. **`cfg: 7.0`** — عند 6.0 يضيع اللون، وعند 8.5 يلتزم لكن التكوين ينضغط
+1. **اسم اللون مرّتين بمرادفين** — `crimson red ... , scarlet red`
+2. **مُقيِّد حجم مع اللون** — `a small narrow ... tied neatly around its neck`
+3. **`full body visible`** في الأمر الموجب
+4. **اللون المُزاحِم في الأمر السالب** — `yellow, yellow scarf, orange scarf`
+5. **`cfg: 7.0`**
 
-مقيس: بالثلاثة خرج الأحمر القاني صحيحًا من أول محاولة.
+القالب الكامل المعتمد، مقيسًا بأربع تجارب:
+
+```
+a small narrow crimson red scarf tied neatly around its neck, scarlet red,
+full body visible, big dark glossy eyes
+NEG: yellow, yellow scarf, orange scarf, ...
+cfg 7.0
+```
+
+ولماذا كل بند: تكرار اللون وحده (بندان 1+4+5) **يصحّح اللون ويُفسد التكوين** —
+يُعطي النموذج الوشاح وزنًا بقدر تكراره، فيتضخّم ويبتلع الجسم. مُقيِّد الحجم
+و`full body visible` يردّان النِّسَب. عند `cfg 6.0` يضيع اللون، وعند `8.5`
+يلتزم لكن الجسم ينضغط.
 التفاصيل والأرقام في `shared/tools/STACK_DECISION.md`.

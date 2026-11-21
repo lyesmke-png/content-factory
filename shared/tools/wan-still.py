@@ -14,8 +14,18 @@ The server must be started by shared/tools/start-comfyui.sh - without
 
 COLOUR: the defaults below are not styling. Each character's colour is its
 identity (shared/brand/characters.md), and this model drops a plain colour
-word - a red scarf came out yellow in two independent runs. Naming the colour
-twice, putting the competing colour in the negative, and cfg 7.0 fixed it.
+word - a red scarf came out yellow in two independent runs. Fixing it took
+four measured attempts, because the obvious fix breaks something else: naming
+the colour twice corrects the colour but inflates the garment until it eats
+the body, since the model weights a thing by how often it is repeated. The
+template that holds both, and the one every shot in this project uses:
+
+    a small narrow crimson red scarf tied neatly around its neck, scarlet red,
+    full body visible, big dark glossy eyes
+    --avoid "yellow, yellow scarf, orange scarf"      (cfg 7.0, the default)
+
+A size qualifier and "full body visible" buy back the proportions that the
+repetition costs.
 
     python shared/tools/wan-still.py \
         --prompt "close up of a small round grey kitten wearing a vivid
