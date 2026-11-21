@@ -1,0 +1,26 @@
+# Shot list for KD-001, in the form the generator consumes.
+#
+# One shot per line:  <positive prompt> TAB <colours to suppress>
+#
+# The style block in shared/tools/wan-still.py is prepended to every line, so
+# it is not repeated here - that is what keeps the eight shots looking like one
+# object.
+#
+# The negative column is per shot and not optional. Measured: a plain "red
+# scarf" generated yellow twice, so the kitten's shots push yellow out. The
+# two shots that also contain Noor CANNOT push yellow out, because her yellow
+# raincoat is her own signature - there the red has to win on repetition
+# alone. See shared/brand/characters.md.
+#
+# "sharp shards, broken glass" is a children's-content compliance constraint
+# on shots 7 and 8, not a style choice: the pieces are ceramic with rounded
+# edges and a paw touches one of them.
+
+extreme close up of two small white rabbit paws hugging a blue ceramic cup with rounded edges against the chest, a white rabbit girl in a bright yellow raincoat, warm window light, bright simple kitchen, warm cream walls	orange, sharp shards, broken glass
+close up of a blue ceramic cup with rounded edges standing alone on the edge of a wooden table, bright daylight kitchen, warm cream walls, soft shadow	orange, sharp shards, broken glass, hands
+extreme close up of the face of a small round grey kitten wearing a small narrow crimson red scarf tied neatly around its neck, scarlet red, big dark glossy eyes open wide, one paw reaching slowly forward, bright simple kitchen	yellow, yellow scarf, orange scarf
+close up of an empty wooden table edge, a small round grey kitten with a small narrow crimson red scarf, scarlet red, standing still and looking down, full body visible, bright simple kitchen	yellow, yellow scarf, orange scarf
+extreme close up of the face of a small round grey kitten with a small narrow crimson red scarf, scarlet red, big dark glossy eyes, quiet thoughtful expression, soft warm light, bright simple kitchen	yellow, yellow scarf, orange scarf
+close up of a small round grey kitten with a small narrow crimson red scarf, scarlet red, lifting its head to face the camera, big dark glossy eyes, calm hopeful expression, soft warm light	yellow, yellow scarf, orange scarf
+medium shot of a white rabbit girl in a bright yellow raincoat sitting on a wooden floor beside a small round grey kitten wearing a small narrow crimson red scarf, scarlet red, her paw resting on the kitten's head, four large blue ceramic pieces with rounded edges on the floor between them, bright simple kitchen	orange, sharp shards, broken glass
+close up from above of four large blue ceramic pieces with rounded edges lying on a wooden floor, one small grey kitten paw gently touching one piece, bright daylight, warm wood	orange, sharp shards, broken glass, yellow
