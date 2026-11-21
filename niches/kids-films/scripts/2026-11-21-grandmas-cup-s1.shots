@@ -2,25 +2,46 @@
 #
 # One shot per line:  <positive prompt> TAB <colours to suppress>
 #
-# The style block in shared/tools/wan-still.py is prepended to every line, so
-# it is not repeated here - that is what keeps the eight shots looking like one
-# object.
+# The style and environment blocks in shared/tools/wan-still.py are prepended
+# to every line, so they are not repeated here - that is what keeps the shots
+# looking like one object in one room.
+#
+# REWRITTEN after rendering the first version. Five of eight shots were
+# usable; the three failures all broke the same rule, so the rule is now
+# followed here rather than restated:
+#
+#   ONE character doing ONE thing. The old shot 7 put two characters, four
+#   objects and a described action in one frame and the model abandoned the
+#   vinyl-toy style entirely for a flat sticker on a seascape - the same
+#   collapse that generating at 640 produced. It is now Noor's paw entering
+#   the frame and resting on Samsam's head: one subject, one gesture, and
+#   better blocking besides, since the script's own line is that the camera
+#   stays on the face that knows the answer.
+#
+#   NO ABSTRACT OBJECTS. "Four ceramic pieces" meant nothing to the model, so
+#   it gave them eyes and made them creatures. The pieces are now described as
+#   what they were - halves of a broken blue cup, with the handle still on one
+#   of them - which the model has seen.
+#
+#   NO SUBJECT THE SHOT DOES NOT NEED. The old shot 4 asked for an empty table
+#   edge AND the kitten, and got the kitten standing on the table like a
+#   figurine. The shot is about absence, so the kitten is gone from it and the
+#   cup's absence carries it.
 #
 # The negative column is per shot and not optional. Measured: a plain "red
 # scarf" generated yellow twice, so the kitten's shots push yellow out. The
-# two shots that also contain Noor CANNOT push yellow out, because her yellow
-# raincoat is her own signature - there the red has to win on repetition
-# alone. See shared/brand/characters.md.
+# two shots that also carry Noor's yellow CANNOT, because yellow is her own
+# signature - there the red has to win on repetition alone.
 #
-# "sharp shards, broken glass" is a children's-content compliance constraint
-# on shots 7 and 8, not a style choice: the pieces are ceramic with rounded
-# edges and a paw touches one of them.
+# "sharp shards, broken glass" on shots 7 and 8 is a children's-content
+# compliance constraint, not a style choice: the pieces are ceramic with
+# rounded edges and a paw touches one of them.
 
-extreme close up of two small white rabbit paws hugging a blue ceramic cup with rounded edges against the chest, a white rabbit girl in a bright yellow raincoat, warm window light, bright simple kitchen, warm cream walls	orange, sharp shards, broken glass
-close up of a blue ceramic cup with rounded edges standing alone on the edge of a wooden table, bright daylight kitchen, warm cream walls, soft shadow	orange, sharp shards, broken glass, hands
-extreme close up of the face of a small round grey kitten wearing a small narrow crimson red scarf tied neatly around its neck, scarlet red, big dark glossy eyes open wide, one paw reaching slowly forward, bright simple kitchen	yellow, yellow scarf, orange scarf
-close up of an empty wooden table edge, a small round grey kitten with a small narrow crimson red scarf, scarlet red, standing still and looking down, full body visible, bright simple kitchen	yellow, yellow scarf, orange scarf
-extreme close up of the face of a small round grey kitten with a small narrow crimson red scarf, scarlet red, big dark glossy eyes, quiet thoughtful expression, soft warm light, bright simple kitchen	yellow, yellow scarf, orange scarf
-close up of a small round grey kitten with a small narrow crimson red scarf, scarlet red, lifting its head to face the camera, big dark glossy eyes, calm hopeful expression, soft warm light	yellow, yellow scarf, orange scarf
-medium shot of a white rabbit girl in a bright yellow raincoat sitting on a wooden floor beside a small round grey kitten wearing a small narrow crimson red scarf, scarlet red, her paw resting on the kitten's head, four large blue ceramic pieces with rounded edges on the floor between them, bright simple kitchen	orange, sharp shards, broken glass
-close up from above of four large blue ceramic pieces with rounded edges lying on a wooden floor, one small grey kitten paw gently touching one piece, bright daylight, warm wood	orange, sharp shards, broken glass, yellow
+extreme close up of two small white rabbit paws hugging a blue ceramic cup with rounded edges against the chest, a white rabbit in a bright yellow raincoat, warm window light	orange, sharp shards, broken glass
+close up of a blue ceramic cup with rounded edges standing alone at the very edge of a light wooden table, soft shadow beside it	orange, sharp shards, broken glass, hands, paws
+extreme close up of the face of a small round grey kitten wearing a small narrow crimson red scarf tied neatly around its neck, scarlet red, big dark glossy eyes open wide, one grey paw reaching slowly forward	yellow, yellow scarf, orange scarf, pink scarf
+close up of the empty edge of a light wooden table, nothing on it, a faint clean ring where a cup stood, soft daylight	pink, purple, yellow, cat, kitten, rabbit, cup
+extreme close up of the face of a small round grey kitten wearing a small narrow crimson red scarf, scarlet red, big dark glossy eyes lowered, quiet guilty expression, soft warm light	yellow, yellow scarf, orange scarf, pink scarf
+close up of a small round grey kitten wearing a small narrow crimson red scarf, scarlet red, lifting its head to face the camera, big dark glossy eyes, calm hopeful expression	yellow, yellow scarf, orange scarf, pink scarf
+close up of a small round grey kitten wearing a small narrow crimson red scarf, scarlet red, with one white rabbit paw in a bright yellow sleeve resting gently on top of its head, warm light	orange, sharp shards, broken glass, pink background
+close up from above of two large curved halves of a broken blue ceramic cup lying on a light wooden floor, the cup handle still attached to one half, smooth rounded edges, one small grey kitten paw touching one half	orange, sharp shards, broken glass, yellow, eyes, face, creature

@@ -65,9 +65,10 @@ def main():
         if a.only and n != a.only:
             continue
         neg = (avoid + ", " + wan_still.NEG) if avoid else wan_still.NEG
-        wf = wan_still.build(wan_still.STYLE + ", " + prompt, neg,
-                             a.size, a.size, a.steps, a.cfg,
-                             a.seed + n, "%s-shot%d" % (a.prefix, n))
+        wf = wan_still.build(
+            wan_still.STYLE + ", " + wan_still.ENV + ", " + prompt, neg,
+            a.size, a.size, a.steps, a.cfg,
+            a.seed + n, "%s-shot%d" % (a.prefix, n))
         t = time.time()
         pid = wan_still.post("/prompt", {"prompt": wf})["prompt_id"]
         while True:

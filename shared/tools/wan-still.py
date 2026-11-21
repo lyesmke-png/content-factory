@@ -48,7 +48,21 @@ HOST = "http://127.0.0.1:8188"
 STYLE = ("3D vinyl toy style, soft matte plastic surface, smooth rounded "
          "simple shapes, big dark glossy eyes, soft studio light, cute "
          "collectible figurine look, childrens animation, no text")
-NEG = ("blurry, low quality, distorted, extra limbs, text, watermark, "
+
+# The environment is locked the same way the style is, and for the same
+# reason. Eight shots that each asked for "bright simple kitchen, warm cream
+# walls" came back pink, lavender, white, sea blue and cream - the style block
+# holds a character across shots but does nothing for the room it stands in.
+# A series whose background changes every five seconds reads as five different
+# worlds, which is exactly what the three-backgrounds rule in the series bible
+# exists to prevent. So the room is stated identically every time, and the
+# colours that kept winning are pushed out in NEG below.
+ENV = ("inside a bright simple kitchen, warm cream painted wall behind, "
+       "light natural wood surfaces, soft daylight from a window")
+
+NEG = ("pink background, magenta background, purple background, "
+       "white background, plain studio backdrop, sky, sea, outdoors, "
+       "blurry, low quality, distorted, extra limbs, text, watermark, "
        "scary, dark, violent")
 
 
@@ -103,7 +117,7 @@ def main():
     a = ap.parse_args()
 
     neg = (a.avoid + ", " + NEG) if a.avoid else NEG
-    wf = build(STYLE + ", " + a.prompt, neg, a.size, a.size,
+    wf = build(STYLE + ", " + ENV + ", " + a.prompt, neg, a.size, a.size,
                a.steps, a.cfg, a.seed, a.out)
 
     t0 = time.time()
