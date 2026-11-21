@@ -190,9 +190,13 @@ def main():
         mix = "".join("[a%d]" % n for n in range(1, len(clips) + 1))
         parts.append("%samix=inputs=%d:dropout_transition=0:normalize=0[aout]"
                      % (mix, len(clips)))
+        # No -shortest here. The mix ends with the last line of dialogue, and
+        # -shortest would trim the picture to match it, eating the tail of the
+        # final shot - measured, it cost 0.95 s of shot 8. The timing sheet is
+        # what decides how long the scene runs, so the video stream is.
         cmd += ["-filter_complex", ";".join(parts),
                 "-map", "0:v", "-map", "[aout]", "-c:v", "copy",
-                "-c:a", "aac", "-b:a", "192k", "-shortest", a.out]
+                "-c:a", "aac", "-b:a", "192k", a.out]
         r = subprocess.run(cmd, capture_output=True, text=True)
         if r.returncode:
             raise SystemExit(r.stderr[-1500:])
